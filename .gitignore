@@ -1,0 +1,7 @@
+
+*.pyc
+
+dist
+gae_paypal.egg-info
+test/lib
+test/conf.yml
