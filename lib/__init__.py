@@ -133,7 +133,7 @@ class Accept(Model):
             'TRANSACTIONID': self.transaction_id
         })
         [self.status] = qs['PAYMENTSTATUS']
-        self.status.upper()
+        self.status = self.status.upper()
         self.put()
 
         if not self.get_is_pending():
