@@ -80,7 +80,7 @@ class AcceptReturnView(View):
         payer_id = str(self.request.get('PayerID'))
 
         if not (token and payer_id):
-            self.response.out.write('400 both token and pay id required')
+            self.response.out.write('400 both token and pay id are required')
             return
 
         payment = paypal.Accept.find_by_token(token)
